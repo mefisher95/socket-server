@@ -1,6 +1,7 @@
 
 
 import socket
+import random
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = "143.198.72.111"
@@ -20,5 +21,5 @@ while True:
     print("connected to ", addr)
     print(c.recv(1024))
     # c.send('we are talking...!!!'.encode('utf-8'))
-    c.send(input().encode('utf-8'))
+    c.send(socket.gethostbyname(), "says:", random.randint(0, 100))
     c.close()

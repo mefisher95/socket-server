@@ -1,6 +1,6 @@
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('143.198.72.111', 7000))
+s.connect(('143.198.72.111', 8757))
 
 s.send('hello from {0}'.format(socket.gethostname()).encode('utf-8'))
 
