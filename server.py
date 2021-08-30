@@ -9,8 +9,9 @@ port = 8757
 s.bind((host, port))
 print(socket.gethostname())
 s.listen(5)
-
+conn_list = []
 def manage_conn(new_con: tuple):
+    conn_list.append(new_con)
     print(new_con)
 
 while True:
@@ -24,6 +25,7 @@ while True:
     print("connected to ", addr)
     print(c.recv(1024))
     # c.send('we are talking...!!!'.encode('utf-8'))
-    manage_conn((c, addr))
+    # manage_conn((c, addr))
+    conn_list.append(addr)
     c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     c.close()
