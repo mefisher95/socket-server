@@ -21,5 +21,5 @@ while True:
     print("connected to ", addr)
     print(c.recv(1024))
     # c.send('we are talking...!!!'.encode('utf-8'))
-    c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]))
+    c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     c.close()
