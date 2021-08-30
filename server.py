@@ -10,6 +10,9 @@ s.bind((host, port))
 print(socket.gethostname())
 s.listen(5)
 
+def manage_conn(new_con: tuple):
+    print(new_con)
+
 while True:
     # now our endpoint knows about the OTHER endpoint.
     # clientsocket, address = s.accept()
@@ -21,5 +24,6 @@ while True:
     print("connected to ", addr)
     print(c.recv(1024))
     # c.send('we are talking...!!!'.encode('utf-8'))
+    manage_conn((c, addr))
     c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     c.close()
