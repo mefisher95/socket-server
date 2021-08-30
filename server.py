@@ -5,7 +5,7 @@ import random
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = "143.198.72.111"
-port = 7000
+port = 8757
 s.bind((host, port))
 print(socket.gethostname())
 s.listen(5)
