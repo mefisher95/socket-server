@@ -3,10 +3,10 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = socket.gethostname()
+host = "143.198.72.111"
 port = 7000
-s.bind((host, 1234))
-print(socket.gethostname(), 1234)
+s.bind((host, port))
+print(socket.gethostname())
 s.listen(5)
 
 while True:
