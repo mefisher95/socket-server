@@ -27,5 +27,6 @@ while True:
     # c.send('we are talking...!!!'.encode('utf-8'))
     # manage_conn((c, addr))
     conn_list.append(addr)
+    print(conn_list)
     c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     c.close()
