@@ -10,6 +10,7 @@ s.bind((host, port))
 print(socket.gethostname())
 s.listen(5)
 conn_list = []
+
 def manage_conn(new_con: tuple):
     conn_list.append(new_con)
     print(new_con)
@@ -29,4 +30,5 @@ while True:
     conn_list.append(addr)
     print(conn_list)
     c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
+    print(c)
     c.close()
