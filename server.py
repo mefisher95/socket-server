@@ -29,6 +29,6 @@ while True:
     # manage_conn((c, addr))
     conn_list.append(addr)
     print(conn_list)
-    c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
+    # c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     print(c)
     c.close()
