@@ -31,4 +31,4 @@ while True:
     print(conn_list)
     # c.send(' '.join([socket.gethostname(), "says:", str(random.randint(0, 100))]).encode('utf-8'))
     print(c)
-    c.close()
+    # c.close()
